@@ -44,7 +44,7 @@ ART_STYLES = {
 }
 
 # Set up the app title and icon
-st.set_page_config(page_title="Shuvo IMAGE GENERATION V2", page_icon="🎨")
+st.set_page_config(page_title="IMAGE GENERATION NSF 1", page_icon="🎨")
 
 # Initialize Hugging Face Inference client
 def get_client():
@@ -61,7 +61,7 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 
 # App UI
-st.title("🎨 SHUVO IMAGE GENERATION SFW ")
+st.title("❌IMAGE GENERATION NSF 1❌")
 st.write("Professional Art Generation with 100+ Style Presets")
 
 # Input parameters
@@ -127,7 +127,7 @@ if st.button("Create Artwork", type="primary"):
             # Generate artwork
             result = client.text_to_image(
                 prompt=full_prompt,
-                model="black-forest-labs/FLUX.1-dev",
+                model="enhanceaiteam/Flux-uncensored",
                 negative_prompt=negative_prompt or None,
                 guidance_scale=guidance_scale,
                 height=height,
@@ -214,7 +214,7 @@ st.markdown("---")
 st.markdown("""
 **Art Studio Tools**
 - Developed by [SHUVO](https://sites.google.com/view/mr-shuvo/Home)
-- Powered by [FLUX.1](https://huggingface.co/black-forest-labs/FLUX.1-dev)
+- Powered by [FLUX.1](https://huggingface.co/enhanceaiteam/Flux-uncensored)
 - 100+ Artistic Style Presets
 - Professional-Grade Generation Parameters
 - Temporary Browser-Based Session Storage
